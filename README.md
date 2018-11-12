@@ -27,4 +27,9 @@ aws에 배포
 https://trello.com/b/R1vgRjf4/bookauctions
 
 #### 라이브러리 ####
++ lombok
++ junit
++ log4j
++ log4jdbc-log4j2
 + mybatis
++ HikariCP
