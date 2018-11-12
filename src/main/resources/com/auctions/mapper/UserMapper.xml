@@ -8,8 +8,16 @@
         INSERT INTO user_TB(userId, userPw, userMail, userCollege) VALUES (#{userId}, #{userPw}, #{userMail}, #{userCollege})
     </insert>
     
-    <select id="confirmId" resultType="int">
+    <select id="confirmId" resultType="String">
         SELECT userId FROM user_TB WHERE userId = #{id}
     </select>
+
+    <select id="getUser" resultType="com.auctions.domain.UserDTO">
+        SELECT userId, userPw, userMail, userCollege FROM user_TB WHERE userId = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE user_TB SET userPw=#{userPw}, userMail=#{userMail}, userCollege=#{userCollege} WHERE userId = #{userId}
+    </update>
 
 </mapper>

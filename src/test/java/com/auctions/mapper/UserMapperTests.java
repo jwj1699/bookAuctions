@@ -17,7 +17,7 @@ public class UserMapperTests {
     @Setter(onMethod_ = {@Autowired})
     private UserMapper mapper;
 
-    @Test
+    //가입테스트
     public void testJoin(){
         UserDTO dto = new UserDTO();
 
@@ -28,4 +28,35 @@ public class UserMapperTests {
 
         mapper.join(dto);
     }
+
+
+    //중복여부 테스트
+    public void testConfirmId(){
+
+        log.info("testId = " + mapper.confirmId("testId"));
+        log.info("abc = " + mapper.confirmId("abc"));
+    }
+
+
+    //유저 정보 불러오기 테스트
+    public void getUser(){
+
+        log.info("testId의 정보 = " + mapper.getUser("testId"));
+    }
+
+    @Test
+    //정보 수정 테스트
+    public void update(){
+
+        UserDTO dto = new UserDTO();
+
+        dto.setUserId("testId");
+        dto.setUserPw("12345");
+        dto.setUserMail("updateMail");
+        dto.setUserCollege("updateCollege");
+
+        mapper.update(dto);
+    }
+
+
 }

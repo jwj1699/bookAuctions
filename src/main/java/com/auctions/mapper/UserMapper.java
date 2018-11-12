@@ -6,5 +6,9 @@ public interface UserMapper {
 
     public void join(UserDTO dto);
 
-    public int confirmId(String id);
+    public String confirmId(String id);
+
+    public UserDTO getUser(String id);
+
+    public int update(UserDTO dto);
 }
