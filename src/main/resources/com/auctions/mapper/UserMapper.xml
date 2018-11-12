@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.auctions.mapper.UserMapper">
+    
+    <insert id="join">
+        INSERT INTO user_TB(userId, userPw, userMail, userCollege) VALUES (#{userId}, #{userPw}, #{userMail}, #{userCollege})
+    </insert>
+    
+    <select id="confirmId" resultType="int">
+        SELECT userId FROM user_TB WHERE userId = #{id}
+    </select>
+
+</mapper>
