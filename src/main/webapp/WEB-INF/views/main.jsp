@@ -8,7 +8,5 @@
 
 메인 페이지</br>
 
-세션값 : ${sessionId}
-
 </body>
 </html>
