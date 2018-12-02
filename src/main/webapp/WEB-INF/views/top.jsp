@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>책방</title>
+    <%--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--%>
 </head>
 <body>
 <div class="wrapper row1">

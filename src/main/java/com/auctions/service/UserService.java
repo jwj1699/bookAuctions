@@ -11,4 +11,6 @@ public interface UserService {
     public UserDTO get(String id);
 
     public int modify(UserDTO dto);
+
+    public String getPw(String id);
 }

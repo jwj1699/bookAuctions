@@ -69,8 +69,8 @@
 </body>
 <script type="text/javascript">
     function IdCheck() {
-        console.log("IdCheck() 실행");
-        var data = { id: $('#uid').val() }
+        var data = { id: $('#uid').val() };
+
         $.ajax({
             type: 'POST',
             url: '/idCheck',
@@ -91,27 +91,5 @@
             }
         });
     }
-
-    /*function IdCheck() {
-        console.log("IdCheck() 실행");
-        var data = { id: $('#uid').val() }
-        $.ajax({
-            type: 'POST',
-            url: '/idCheck',
-            data : $('#uid').val(),
-            contentType : "application/json; charset=utf-8",
-            success: function (result) {
-                console.log("result = " +result);
-                if (result == null) {
-                    $('#IDCheck').css({color: "red"});
-                    $('#IDCheck').html('사용할 수 없는 아이디 입니다.');
-                } else {
-                    $('#IDCheck').css({color: "green"});
-                    $('#IDCheck').html('사용할 수 있는 아이디 입니다.');
-                }
-            }
-        });
-    }*/
-
 </script>
 </html>

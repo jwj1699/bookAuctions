@@ -33,4 +33,9 @@ public class UserServiceImpl implements UserService{
     public int modify(UserDTO dto) {
         return mapper.update(dto);
     }
+
+    @Override
+    public String getPw(String id) {
+        return mapper.idForPw(id);
+    }
 }

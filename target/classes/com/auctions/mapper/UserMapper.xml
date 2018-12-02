@@ -20,4 +20,8 @@
         UPDATE user_TB SET userPw=#{userPw}, userMail=#{userMail}, userCollege=#{userCollege} WHERE userId = #{userId}
     </update>
 
+    <select id="idForPw" resultType="String">
+        SELECT userPw FROM user_TB WHERE userId=#{id}
+    </select>
+
 </mapper>

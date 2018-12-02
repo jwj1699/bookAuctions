@@ -3,9 +3,12 @@
 <head>
     <title>메인페이지</title>
 </head>
-<body>
+<br>
 <%@ include file="top.jsp" %>
 
-메인 페이지
-</body>s
+메인 페이지</br>
+
+세션값 : ${sessionId}
+
+</body>
 </html>

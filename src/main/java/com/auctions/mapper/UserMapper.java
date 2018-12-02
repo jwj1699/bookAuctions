@@ -11,4 +11,6 @@ public interface UserMapper {
     public UserDTO getUser(String id);
 
     public int update(UserDTO dto);
+
+    public String idForPw(String id);
 }
